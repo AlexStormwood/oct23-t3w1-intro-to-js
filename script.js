@@ -117,6 +117,11 @@ alex.hobbies[1].favouriteGames[0] = "palworld";
 console.log(alex);
 
 
+/**
+ * Status of the weather, manually set.
+ * @date 4/4/2024 - 8:59:52 PM
+ * @author BigfootDS
+ */
 let weather = "rainy";
 
 switch (weather) {
