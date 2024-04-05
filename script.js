@@ -1,169 +1,204 @@
-let exampleEmptyVariable = null;
-let anotherEmptyVariable = undefined;
+function exampleStuff(){
+	let exampleEmptyVariable = null;
+	let anotherEmptyVariable = undefined;
+	
+	console.log(exampleEmptyVariable, anotherEmptyVariable);
+	
+	let message = "hello from the script.js file!";
+	
+	console.log(message);
+	
+	// // no keyword = declared with var
+	// world = "Earth";
+	
+	// console.log(`Hello ${world}, I am Alex!`);
+	
+	// console.log("Hello " + world + ", I am Alex!");
+	
+	// let world = "Mars";
+	
+	// console.log(`Hello ${world}, I am Alex!`);
+	
+	// {
+	
+	// 	//let world = "Mars";
+	
+	// 	console.log(`Hello ${world}, I am Alex!`);
+	
+	// }
+	
+	
+	
+	
+	
+	
+	
+	// List in Python is Array in JS
+	
+	let favouriteFruits = [
+		"mango",
+		"banana",
+		"grapes",
+		"passionfruit",
+		"pear",
+		"strawberry",
+		"watermelon",
+		"lychee",
+		"cherry",
+		"blueberry",
+		"tomato",
+		"papaya",
+		"dragon fruit",
+		"kiwi"
+	];
+	
+	console.log(favouriteFruits[12]);
+	
+	console.log("The class' favourite fruits are: " + favouriteFruits);
+	
+	
+	// favouriteFruits.forEach(fruit => {
+	// 	console.log("Someone in the class loves " + fruit);
+	// });
+	
+	for (fruitIndex in favouriteFruits) {
+		console.log("Someone in the class loves " + favouriteFruits[fruitIndex]);
+	}
+	
+	
+	console.log(Array.isArray(favouriteFruits));
+	
+	
+	// Array.prototype.sort()
+	let sortedFavouriteFruits = favouriteFruits.sort();
+	
+	console.log(sortedFavouriteFruits);
+	
+	let someNewArray = new Array(10);
+	
+	someNewArray.push("mango");
+	
+	console.log(someNewArray);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// Dictionary in Python is Object in JS
+	
+	let alex = {
+		name: "alex",
+		"codingLanguages": ["C#", "JavaScript", "HTML", "CSS"],
+		hobbies: [
+			{
+				"name": "gardening",
+				"skill": 10,
+			},
+			{
+				"name": "gaming",
+				"favouriteGames": ["pokemon", "halo"],
+				"skill": 9001,
+			}
+		],
+	};
+	
+	alex.hobbies[1]["favouriteGames"][0] = "digimon";
+	
+	alex.hobbies[1].favouriteGames[0] = "palworld";
+	
+	console.log(alex);
+	
+	
+	/**
+	 * Status of the weather, manually set.
+	 * @date 4/4/2024 - 8:59:52 PM
+	 * @author BigfootDS
+	 */
+	let weather = "rainy";
+	
+	switch (weather) {
+		case "sunny":
+			console.log("Sunny weather is nice when it's not hot!");
+			break;
+		case "rainy":
+			console.log("Rain is nice when it's not torrential!");
+			break;
+		case "hail":
+			console.log("Man, that hail is wild");
+			// break;
+		case "storm":
+		case "snowy":
+		default:
+			console.log("Crazy weather, am I right?");
+			break;
+	}
+	
+	
+	if (weather == "sunny") {
+		console.log("Sunny weather is nice when it's not hot!");
+	} else if (weather == "rainy") {
+		console.log("Rain is nice when it's not torrential!");
+	} else {
+		console.log("Crazy weather, am I right?");
+	}
+	
+	
+}
 
-console.log(exampleEmptyVariable, anotherEmptyVariable);
 
-let message = "hello from the script.js file!";
-
-console.log(message);
-
-// // no keyword = declared with var
-// world = "Earth";
-
-// console.log(`Hello ${world}, I am Alex!`);
-
-// console.log("Hello " + world + ", I am Alex!");
-
-// let world = "Mars";
-
-// console.log(`Hello ${world}, I am Alex!`);
-
-// {
-
-// 	//let world = "Mars";
-
-// 	console.log(`Hello ${world}, I am Alex!`);
-
-// }
-
-
-
-
-
-
-
-// List in Python is Array in JS
-
-let favouriteFruits = [
-	"mango",
-	"banana",
-	"grapes",
-	"passionfruit",
-	"pear",
-	"strawberry",
-	"watermelon",
-	"lychee",
-	"cherry",
-	"blueberry",
-	"tomato",
-	"papaya",
-	"dragon fruit",
-	"kiwi"
+let pokemonTeam = [
+	"pikachu",
+	"squirtle",
+	"charmander",
+	"mew",
 ];
 
-console.log(favouriteFruits[12]);
 
-console.log("The class' favourite fruits are: " + favouriteFruits);
+function logTheTeam () {
+	sortedTeam = pokemonTeam.sort();
 
+	let [firstPokemon, ...otherPokemon] = sortedTeam;
 
-// favouriteFruits.forEach(fruit => {
-// 	console.log("Someone in the class loves " + fruit);
-// });
+	console.log(firstPokemon);
+	console.log(otherPokemon);
 
-for (fruitIndex in favouriteFruits) {
-	console.log("Someone in the class loves " + favouriteFruits[fruitIndex]);
+	do {
+		console.log(sortedTeam.pop());
+	} while (sortedTeam.length);
+
+	sortedTeam.push("blastoise");
+
+	for (let index = 0; index < sortedTeam.length; index++) {
+		console.log("Pokemon at index " + index + " is " + sortedTeam[index]);
+	}
 }
 
-
-console.log(Array.isArray(favouriteFruits));
-
-
-// Array.prototype.sort()
-let sortedFavouriteFruits = favouriteFruits.sort();
-
-console.log(sortedFavouriteFruits);
-
-let someNewArray = new Array(10);
-
-someNewArray.push("mango");
-
-console.log(someNewArray);
+// logTheTeam();
 
 
+const logTheTeamAlternate = (targetSize = 4) => {
+	// double equals is checking for value
+	// type coercion happens where possible automatically
+	if (pokemonTeam.length == targetSize){
+		console.log("There are + " + targetSize + " pokemon in the team");
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-// Dictionary in Python is Object in JS
-
-let alex = {
-	name: "alex",
-	"codingLanguages": ["C#", "JavaScript", "HTML", "CSS"],
-	hobbies: [
-		{
-			"name": "gardening",
-			"skill": 10,
-		},
-		{
-			"name": "gaming",
-			"favouriteGames": ["pokemon", "halo"],
-			"skill": 9001,
-		}
-	],
-};
-
-alex.hobbies[1]["favouriteGames"][0] = "digimon";
-
-alex.hobbies[1].favouriteGames[0] = "palworld";
-
-console.log(alex);
-
-
-/**
- * Status of the weather, manually set.
- * @date 4/4/2024 - 8:59:52 PM
- * @author BigfootDS
- */
-let weather = "rainy";
-
-switch (weather) {
-	case "sunny":
-		console.log("Sunny weather is nice when it's not hot!");
-		break;
-	case "rainy":
-		console.log("Rain is nice when it's not torrential!");
-		break;
-	case "hail":
-		console.log("Man, that hail is wild");
-		// break;
-	case "storm":
-	case "snowy":
-	default:
-		console.log("Crazy weather, am I right?");
-		break;
+	// triple equals is checking for value AND data type
+	if (pokemonTeam.length === targetSize){
+		console.log("There are " +  targetSize  + " Pokemon in the team, this is from the strict equals comparison");
+	}
 }
-
-
-if (weather == "sunny") {
-	console.log("Sunny weather is nice when it's not hot!");
-} else if (weather == "rainy") {
-	console.log("Rain is nice when it's not torrential!");
-} else {
-	console.log("Crazy weather, am I right?");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+logTheTeamAlternate();
+logTheTeamAlternate(2);
 
 
 
