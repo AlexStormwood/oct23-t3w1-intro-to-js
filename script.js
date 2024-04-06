@@ -252,13 +252,20 @@ function improvedTeamLogging(pokemonTeam){
 	});
 }
 
+const capitalisedNameLogging = (pokemonTeam) => {
+	pokemonTeam.forEach(pokemonName => {
+		console.log(pokemonName.toUpperCase());
+	});
+}
+
 
 person.listFavouritePokemon(["pikachu", "blastoise"], improvedTeamLogging);
 
 person.listFavouritePokemon(
 	["pikachu", "blastoise"], 
-	improvedTeamLogging
+	capitalisedNameLogging
 );
+
 
 
 
